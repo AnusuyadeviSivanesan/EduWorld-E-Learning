@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container mt-5" style="max-width: 600px; margin: auto; text-align: start;">
+    <h1>Your Profile</h1>
+    <p>Email: <span id="displayEmail"></span></p>
+    <p>Username: <span id="displayUsername"></span></p>
+    <p>Full Name: <span id="displayFullname"></span></p>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const data = localStorage.getItem('profileData');
+      if (!data) {
+        document.body.innerHTML = '<p>No profile data found. Please register first.</p>';
+        return;
+      }
+      try {
+        const profile = JSON.parse(data);
+        document.getElementById('displayEmail').textContent = profile.email;
+        document.getElementById('displayUsername').textContent = profile.username;
+        document.getElementById('displayFullname').textContent = profile.fullname;
+      } catch {
+        console.error('Invalid profile data');
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+ 
+   body {
+      font-family: 'Lucida Sans', sans-serif !important;
+      background-image: var(--body-color);
+      background-attachment: fixed;
+    }
+
+    :root{
+      --body-color: linear-gradient(rgb(214, 238, 238), rgb(102, 165, 165));
+      --nav-bg:  rgba(255,255,255,0.4);
+      --a-text-color: black;
+      --bg-white: white;
+      --text: black;
+      --heading-text-color: black;
+    }
+
+    .dark-theme {
+      --body-color: linear-gradient(rgb(202, 253, 155), rgb(214, 210, 210));
+      --nav-bg: rgba(8, 46, 90, 0.4);
+      --a-text-color: white;
+      --bg-white: #121212;
+      --text: white;
+      --heading-text-color: lightblue;
+    }
+     
+
+    .navBarTop {
+      background-color: var(--nav-bg);
+      box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    .navBar a{
+      color: var(--a-text-color) !important;
+    }
+
+    .LoginForm {
+      background-color: var(--bg-white);
+      color: black;
+    }
+
+    .LoginForm h3 {
+      color: var(--heading-text-color);
+    }
+
+    .LoginForm label,p {
+      color: var(--text);
+    }
+
+
+  
